@@ -135,7 +135,8 @@ class _MyHomePageState extends State<MyHomePage> {
         )
       ],
     );
-    final ListTransWidget = Container(
+    // ignore: non_constant_identifier_names
+    final ListTransWidget = SizedBox(
       height: (mediaQuery.size.height -
               appBar.preferredSize.height -
               mediaQuery.padding.top) *
@@ -166,7 +167,7 @@ class _MyHomePageState extends State<MyHomePage> {
                 ],
               ),
             if (!isLandscape)
-              Container(
+              SizedBox(
                 height: (mediaQuery.size.height -
                         appBar.preferredSize.height -
                         mediaQuery.padding.top) *
@@ -176,13 +177,13 @@ class _MyHomePageState extends State<MyHomePage> {
             if (!isLandscape) ListTransWidget,
             if (isLandscape)
               _switchValue
-                  ? Container(
+                  ? SizedBox(
                       height: (mediaQuery.size.height -
                               appBar.preferredSize.height -
                               mediaQuery.padding.top) *
                           0.4,
                       child: Chart(_recentTransactions),
-                    ) 
+                    )
                   : ListTransWidget
           ],
         ),
